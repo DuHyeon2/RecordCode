@@ -1,4 +1,4 @@
-package com.duhyeon.toyproject;
+package com.duhyeon.RecodeCode;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
