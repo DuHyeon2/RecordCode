@@ -36,4 +36,9 @@ public class MemberController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
 }
