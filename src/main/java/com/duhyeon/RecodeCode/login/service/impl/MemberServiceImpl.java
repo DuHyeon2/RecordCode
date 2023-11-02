@@ -14,6 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.mail.MessagingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -21,13 +22,17 @@ import java.util.Optional;
 @Service("memberService")
 public class MemberServiceImpl implements UserDetailsService,MemberService {
 
+    @Resource(name="emailService")
+    private EmailServiceImpl emailService;
+
     @Resource(name="memberRepository")
     private MemberRepository memberRepository;
 
     @Override
-    public void register(MemberDto memberDto) {
+    public void register(MemberDto memberDto) throws MessagingException {
         PasswordEncoder encoder = new BCryptPasswordEncoder();
         memberDto.setMemberPw(encoder.encode(memberDto.getMemberPw()));
+
         Member member = new Member();
         member.setMemberId(memberDto.getMemberId());
         member.setMemberPw(memberDto.getMemberPw());
@@ -45,17 +50,15 @@ public class MemberServiceImpl implements UserDetailsService,MemberService {
         Optional<Member> member = memberRepository.findByMemberId(username);
         System.out.println("loadUserByUsername 실행");
         if (!member.isPresent()) {
-            System.out.println("username : " + username);
-            System.out.println("loadUserByUsername 실패");
             throw new UsernameNotFoundException(username);
         }
         else{
-            System.out.println("loadUserByUsername 성공");
             Member getMember = member.get();
 
             List<GrantedAuthority> roles = new ArrayList<>();
             roles.add((GrantedAuthority) () -> getMember.getAuth());
             AccountContext accountContext = new AccountContext(getMember, roles);
+
             return accountContext;
         }
     }
