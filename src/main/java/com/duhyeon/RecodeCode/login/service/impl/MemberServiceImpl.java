@@ -48,7 +48,6 @@ public class MemberServiceImpl implements UserDetailsService,MemberService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<Member> member = memberRepository.findByMemberId(username);
-
         if (!member.isPresent()) {
             throw new UsernameNotFoundException(username);
         }
