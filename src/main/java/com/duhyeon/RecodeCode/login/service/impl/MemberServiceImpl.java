@@ -49,11 +49,10 @@ public class MemberServiceImpl implements UserDetailsService,MemberService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<Member> member = memberRepository.findByMemberId(username);
         if (!member.isPresent()) {
-            throw new UsernameNotFoundException(username);
+            throw new UsernameNotFoundException(username + "ID 불일치");
         }
         else{
             Member getMember = member.get();
-
             List<GrantedAuthority> roles = new ArrayList<>();
             roles.add((GrantedAuthority) () -> getMember.getAuth());
             AccountContext accountContext = new AccountContext(getMember, roles);
