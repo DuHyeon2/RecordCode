@@ -15,4 +15,5 @@ public class MemberDto {
     private String memberEmail;
     private String memberAddress;
     private String auth;
+    private String memberPwConfirm;
 }

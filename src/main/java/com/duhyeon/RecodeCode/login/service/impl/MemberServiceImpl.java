@@ -30,6 +30,15 @@ public class MemberServiceImpl implements UserDetailsService,MemberService {
 
     @Override
     public void register(MemberDto memberDto) throws MessagingException {
+        if(memberRepository.findByMemberId(memberDto.getMemberId()).isPresent()){
+            throw new MessagingException("이미 존재하는 아이디입니다.");
+        }
+
+        // 비밀번호 일치 여부 확인
+        if(!memberDto.getMemberPw().equals(memberDto.getMemberPwConfirm())){
+            throw new MessagingException("비밀번호가 일치하지 않습니다.");
+        }
+
         PasswordEncoder encoder = new BCryptPasswordEncoder();
         memberDto.setMemberPw(encoder.encode(memberDto.getMemberPw()));
 

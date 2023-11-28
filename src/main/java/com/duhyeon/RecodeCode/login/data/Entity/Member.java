@@ -1,5 +1,6 @@
 package com.duhyeon.RecodeCode.login.data.Entity;
 
+import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -24,23 +25,30 @@ public class Member implements UserDetails {
     private Long memberInfoId;
 
     @Column(length = 20,unique = true)
+    @NotNull
     private String memberId;
 
     @Column(length = 100)
+    @NotNull
     private String memberPw;
 
     @Column(length = 20)
+    @NotNull
     private String memberName;
 
     @Column(length = 20)
+    @NotNull
     private String memberPhone;
 
     @Column(length = 20)
+    @NotNull
     private String memberEmail;
 
     @Column(length = 50)
+    @NotNull
     private String memberAddress;
 
+    @NotNull
     private String auth;
 
     @Override

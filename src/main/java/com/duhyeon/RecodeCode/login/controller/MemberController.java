@@ -27,12 +27,13 @@ public class MemberController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity register(MemberDto memberDto) {
+    public String register(MemberDto memberDto) {
         try {
             memberService.register(memberDto);
-            return new ResponseEntity("회원가입에 성공했습니다.", HttpStatus.OK);
+            return "redirect:/login";
         } catch (Exception e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+            e.printStackTrace();
+            return "redirect:/register";
         }
     }
 
