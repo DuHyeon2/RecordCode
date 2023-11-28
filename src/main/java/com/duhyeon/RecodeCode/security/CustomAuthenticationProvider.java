@@ -1,6 +1,5 @@
 package com.duhyeon.RecodeCode.security;
 
-import com.duhyeon.RecodeCode.login.service.MemberService;
 import com.duhyeon.RecodeCode.login.service.impl.MemberServiceImpl;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
