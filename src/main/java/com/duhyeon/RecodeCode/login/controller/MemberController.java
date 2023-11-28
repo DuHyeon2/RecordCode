@@ -30,7 +30,7 @@ public class MemberController {
     public ResponseEntity register(MemberDto memberDto) {
         try {
             memberService.register(memberDto);
-            return new ResponseEntity<>("회원가입에 성공했습니다.", HttpStatus.OK);
+            return new ResponseEntity("회원가입에 성공했습니다.", HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
