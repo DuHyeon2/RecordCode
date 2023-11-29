@@ -1,6 +1,6 @@
-package com.duhyeon.RecodeCode.login.service.impl;
+package com.duhyeon.RecordCode.login.service.impl;
 
-import com.duhyeon.RecodeCode.login.service.EmailService;
+import com.duhyeon.RecordCode.login.service.EmailService;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.duhyeon.RecodeCode.security;
+package com.duhyeon.RecordCode.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,9 +28,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and()
                 .formLogin()
-                .loginPage("/login")
-                .defaultSuccessUrl("/index")
-        ;
+                    .loginPage("/login")
+                    .defaultSuccessUrl("/index");
     }
 
     @Override
@@ -38,7 +37,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         web
             .ignoring()
             .antMatchers("/static/**", "/templates/**", "/resources/**", "/css/**", "/js/**", "/img/**");
-
     }
 
     @Override

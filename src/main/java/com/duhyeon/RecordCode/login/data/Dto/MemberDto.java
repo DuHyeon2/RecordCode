@@ -1,4 +1,4 @@
-package com.duhyeon.RecodeCode.login.data.Dto;
+package com.duhyeon.RecordCode.login.data.Dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

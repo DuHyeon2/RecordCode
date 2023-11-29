@@ -1,4 +1,4 @@
-package com.duhyeon.RecodeCode;
+package com.duhyeon.RecordCode;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

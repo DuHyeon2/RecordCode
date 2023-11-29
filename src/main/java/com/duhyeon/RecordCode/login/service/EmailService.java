@@ -1,4 +1,4 @@
-package com.duhyeon.RecodeCode.login.service;
+package com.duhyeon.RecordCode.login.service;
 
 import javax.mail.MessagingException;
 

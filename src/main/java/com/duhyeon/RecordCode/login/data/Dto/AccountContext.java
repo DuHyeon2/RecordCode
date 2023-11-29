@@ -1,6 +1,6 @@
-package com.duhyeon.RecodeCode.login.data.Dto;
+package com.duhyeon.RecordCode.login.data.Dto;
 
-import com.duhyeon.RecodeCode.login.data.Entity.Member;
+import com.duhyeon.RecordCode.login.data.Entity.Member;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 

@@ -1,6 +1,6 @@
-package com.duhyeon.RecodeCode.login.data.Repository;
+package com.duhyeon.RecordCode.login.data.Repository;
 
-import com.duhyeon.RecodeCode.login.data.Entity.Member;
+import com.duhyeon.RecordCode.login.data.Entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

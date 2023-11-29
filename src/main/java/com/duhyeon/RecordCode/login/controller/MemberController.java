@@ -1,9 +1,7 @@
-package com.duhyeon.RecodeCode.login.controller;
+package com.duhyeon.RecordCode.login.controller;
 
-import com.duhyeon.RecodeCode.login.data.Dto.MemberDto;
-import com.duhyeon.RecodeCode.login.service.MemberService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import com.duhyeon.RecordCode.login.data.Dto.MemberDto;
+import com.duhyeon.RecordCode.login.service.MemberService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

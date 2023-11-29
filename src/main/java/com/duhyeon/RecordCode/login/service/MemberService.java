@@ -1,6 +1,6 @@
-package com.duhyeon.RecodeCode.login.service;
+package com.duhyeon.RecordCode.login.service;
 
-import com.duhyeon.RecodeCode.login.data.Dto.MemberDto;
+import com.duhyeon.RecordCode.login.data.Dto.MemberDto;
 
 import javax.mail.MessagingException;
 

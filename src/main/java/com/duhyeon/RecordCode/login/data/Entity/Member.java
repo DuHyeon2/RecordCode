@@ -1,4 +1,4 @@
-package com.duhyeon.RecodeCode.login.data.Entity;
+package com.duhyeon.RecordCode.login.data.Entity;
 
 import com.sun.istack.NotNull;
 import lombok.Data;

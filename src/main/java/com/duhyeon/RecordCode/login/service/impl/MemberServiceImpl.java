@@ -1,10 +1,10 @@
-package com.duhyeon.RecodeCode.login.service.impl;
+package com.duhyeon.RecordCode.login.service.impl;
 
-import com.duhyeon.RecodeCode.login.data.Dto.AccountContext;
-import com.duhyeon.RecodeCode.login.data.Dto.MemberDto;
-import com.duhyeon.RecodeCode.login.data.Entity.Member;
-import com.duhyeon.RecodeCode.login.data.Repository.MemberRepository;
-import com.duhyeon.RecodeCode.login.service.MemberService;
+import com.duhyeon.RecordCode.login.data.Dto.AccountContext;
+import com.duhyeon.RecordCode.login.data.Dto.MemberDto;
+import com.duhyeon.RecordCode.login.data.Entity.Member;
+import com.duhyeon.RecordCode.login.data.Repository.MemberRepository;
+import com.duhyeon.RecordCode.login.service.MemberService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
